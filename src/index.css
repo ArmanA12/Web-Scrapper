@@ -1,0 +1,70 @@
+/* Move this to App.css instead of inline in the JSX */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Existing animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin-slower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 25s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin-slower 30s linear infinite;
+}
+
+/* Moved from your inline style */
+#dashedborder {
+  height: 50px;
+  top: 0px;
+  width: 607px;
+}
+
+#bordertwo{
+  height: 48px;
+  top: 0px;
+  width: 607px;
+  border-radius: 15px;
+}
+@media screen and (max-width:600px){
+  #bordertwo, #dashedborder{
+    width: 74vw !important;
+  }
+}
+#heading{
+  font-weight: 600;
+  background: transparent;
+  text-shadow: 1px 1px 0 #282d68, 1px -1px 0 #282d68, -1px 1px 0 #282d68, -1px -1px 0 #282d68, 2px 0px 0 #282d68, 0px 1px 0 #282d68, -1px 0px 0 #282d68, 0px -1px 0 #282d68;
+  color: black;
+  letter-spacing: 3px;
+  }
