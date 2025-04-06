@@ -6,23 +6,27 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle scraping logic here
     console.log('Scraping:', url);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-[#0A0A0A] to-[#0F0F0F] flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Animated background effects */}
+      {/* Animated background effects with enhanced sunlight-through-water effect */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        {/* Base grid and radial gradient */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_50%_-100%,#646CFF15,transparent)]"></div>
+        {/* Sunlight-through-water effect */}
+        <div className='absolute w-40 h-[500px] bg-blue-700 left-[45%] blur-[95px] -top-72'>
+            
+        </div>
       </div>
 
       <div className="max-w-2xl w-full relative">
         {/* Enhanced Globe Animation */}
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 pointer-events-none">
           <div className="relative">
-            <div className="absolute inset-0  w-40 h-40 bg-[#646CFF] blur-[64px] opacity-20 animate-pulse"></div>
+            <div className="absolute inset-0 w-40 h-40 bg-[#646CFF] blur-[64px] opacity-20 animate-pulse"></div>
             <div className="absolute inset-0 animate-spin-slow">
               <div className="w-32 h-32 rounded-full border border-[#646CFF]/20"></div>
             </div>
@@ -48,10 +52,9 @@ function App() {
 
         {/* Main Content Card */}
         <div className="relative group">
-          {/* Dynamic border glow */}
           <div className="absolute -inset-[1px] bg-gradient-to-r from-[#646CFF] via-transparent to-[#646CFF] rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
-          <div style={{ border: "1px solid rgba(255,255,255,0.1)" }} className="relative  backdrop-blur-md rounded-2xl p-8 border">
+          <div style={{ border: "1px solid rgba(255,255,255,0.1)" }} className="relative backdrop-blur-md rounded-2xl p-8 border">
             <h1 id='heading' className="text-7xl font-bold text-center mb-3 bg-gradient-to-br from-white to-white/70 text-transparent bg-clip-text">
               Web Scraper
             </h1>
@@ -60,7 +63,6 @@ function App() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-2">
-              {/* Enhanced URL Input with corner gradient */}
               <div id='border' className="relative group/input">
                 <div className="absolute top-0 left-0 w-2/3 h-3/4">
                   <div id='dashedborder' className="absolute -top-[1px] -left-[1px] w-full h-[1px] bg-gradient-to-r from-[#282d68] to-[#282d68] rounded-xl"></div>
@@ -88,25 +90,23 @@ function App() {
                       <span className="text-white font-medium text-base" style={{ letterSpacing: "2px" }}>Start Scraping</span>
                       <ArrowRight className="w-5 h-5 ml-2 text-white transition-transform group-hover/button:translate-x-1" />
                     </div>
-                    {/* Shine effect */}
                   </div>
                 </button>
               </div>
               <div className='text-[#8F9199] flex justify-center'>
                 <div id="socialIcons" style={{ display: "flex", gap: "30px", marginTop: "20px" }}>
-                  <div className='themeToggleButton'>    <a href="https://www.linkedin.com/in/arman-shekh12/"><Linkedin size={19} strokeWidth={1} /></a> </div>
-                  <div className='themeToggleButton'>   <a href="https://github.com/ArmanA12"> <Github size={19} strokeWidth={1} /></a> </div>
-                  <div className='themeToggleButton'>    <a href="https://x.com/shekh_md72383"><X size={19} strokeWidth={1} /></a> </div>
-                  <div className='themeToggleButton'>    <a href="https://www.facebook.com/mdarman.shekh.5201"><Facebook size={19} strokeWidth={1} /></a> </div>
-                  <div className='themeToggleButton'>    <a href="https://www.instagram.com/arman_aishakar/"><Instagram size={19} strokeWidth={1} /></a> </div>
+                  <div className='themeToggleButton'><a href="https://www.linkedin.com/in/arman-shekh12/"><Linkedin size={19} strokeWidth={1} /></a></div>
+                  <div className='themeToggleButton'><a href="https://github.com/ArmanA12"><Github size={19} strokeWidth={1} /></a></div>
+                  <div className='themeToggleButton'><a href="https://x.com/shekh_md72383"><X size={19} strokeWidth={1} /></a></div>
+                  <div className='themeToggleButton'><a href="https://www.facebook.com/mdarman.shekh.5201"><Facebook size={19} strokeWidth={1} /></a></div>
+                  <div className='themeToggleButton'><a href="https://www.instagram.com/arman_aishakar/"><Instagram size={19} strokeWidth={1} /></a></div>
                 </div>
-
               </div>
             </form>
           </div>
         </div>
         <div className='flex justify-center fixed bottom-0 w-full left-0'>
-          <div className=" text-[#8F9199]  w-1/2  text-center h-full  bg-gradient-to-r from-transparent via-[#646CFF]/10 to-transparent">Developed By Mr Arman</div>
+          <div className="text-[#8F9199] w-1/2 text-center h-full bg-gradient-to-r from-transparent via-[#646CFF]/10 to-transparent">Developed By Mr Arman</div>
         </div>
       </div>
     </div>
